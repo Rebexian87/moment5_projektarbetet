@@ -13,11 +13,15 @@
         <p>{{error()}}</p>
     </div> -->
 <!-- } -->
+    <label for="selectAmne">Välj ämne</label>
+    <select name="selectAmne" id="" (click)="filterSelect"></select>
 <table>
       <thead>
 <tr>
     <th  (click)="sort1()">Kurskod</th>
     <th  (click)="sort2()">Namn</th>
+       <th  (click)="sort3()">Poäng</th>
+          <th  (click)="sort3()">Ämne</th>
     <th  (click)="sort3()">Progression</th>
     <th>Länk</th>
     
@@ -26,8 +30,10 @@
 
     
    <tbody *ngFor="let course of filteredCourses">
-        <td>{{course.code}}</td>
-        <td>{{course.coursename}}</td>
+        <td>{{course.courseCode}}</td>
+        <td>{{course.courseName}}</td>
+            <td>{{course.points}}</td>
+        <td>{{course.subject}}</td>
         <td>{{course.progression}}</td>  
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
     </tbody>

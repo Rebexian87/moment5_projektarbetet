@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CoursesService {
-   url: string = "https://webbutveckling.miun.se/files/ramschema.json";
+   url: string = "https://matdah.github.io/DT208G---Programmering-i-TypeScript/Moment%205%20-%20Projekt/miun_courses.json";
 
   constructor(private http: HttpClient){ }
 

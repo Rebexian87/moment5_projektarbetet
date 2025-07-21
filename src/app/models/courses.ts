@@ -1,7 +1,9 @@
 export interface courses {
-    code: string;
-    coursename: string;
+    courseCode: string;
+    courseName: string;
+    points: number;
     progression: string;
+    subject: string;
     syllabus: string
 }
 
