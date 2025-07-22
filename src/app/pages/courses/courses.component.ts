@@ -21,7 +21,7 @@ export class CoursesComponent {
 
   sortedCourses: courses [] = [];
 
-
+  e:any ='';
 
   
 
@@ -56,8 +56,15 @@ export class CoursesComponent {
 
   }
   
-  filterSelect ():void {
-    
-  }
+   applyFilter2 (e:any):void {
+       let push= e.target.id
+
+       console.log(push);
+       
+
+          this.filteredCourses= this.courses.filter((course)=>course.subject === push)
+
+
+   }
 
 }

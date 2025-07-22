@@ -14,7 +14,10 @@
     </div> -->
 <!-- } -->
     <label for="selectAmne">Välj ämne</label>
-    <select name="selectAmne" id="" (click)="filterSelect"></select>
+    <select  name="selectAmne" id="" ><option *ngFor="let course of courses" id="{{course.subject}}"  value="" (click)="applyFilter2($event)" >{{course.subject}}</option></select>
+    <!--{{course.subject}} [(ngModel)]="filterValue" (click)="filterSelect" -->
+
+    <!--(click)="applyFilter2()" -->
 <table>
       <thead>
 <tr>
