@@ -66,5 +66,16 @@ export class CoursesComponent {
 
 
    }
+   
+storeCourse(e:any):void {
+  let push= e.target.id
+
+      let oldCourseArr =JSON.parse(localStorage.getItem("courses") as string) || []  // Retrievs already stored data from localstorage and add the data ta an array or get an empty array if there is no data
+     let test =  this.courses.filter((course)=>course.courseCode === push)
+   oldCourseArr.push(test)  //Add new course
+   localStorage.setItem("courses", JSON.stringify(oldCourseArr)) 
+}
 
 }
+
+

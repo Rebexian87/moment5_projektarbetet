@@ -39,6 +39,7 @@
         <td>{{course.subject}}</td>
         <td>{{course.progression}}</td>  
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
+        <td><button id="{{course.courseCode}}" (click)="storeCourse($event)">Lägg till</button></td>  
     </tbody>
 
     
