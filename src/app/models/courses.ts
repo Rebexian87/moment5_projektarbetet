@@ -7,4 +7,8 @@ export interface courses {
     syllabus: string
 }
 
+
+
+
+
 //https://webbutveckling.miun.se/files/ramschema.json

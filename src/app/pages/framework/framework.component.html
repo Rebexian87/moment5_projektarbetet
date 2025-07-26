@@ -1,1 +1,36 @@
 <p>framework works!</p>
+
+
+<table>
+
+
+      <thead>
+<tr>
+    <!-- <th  (click)="sort1()">Kurskod</th>
+    <th  (click)="sort2()">Namn</th>
+       <th  (click)="sort3()">Poäng</th>
+          <th  (click)="sort3()">Ämne</th>
+    <th  (click)="sort3()">Progression</th>
+    <th>Länk</th> -->
+    
+</tr>
+    </thead>
+
+
+   <tbody *ngFor="let course of filteredCourses; let i=index"> 
+        <td>{{i}}{{course.courseCode}}</td>
+        <td>{{course.courseName}}</td>
+            <td>{{course.points}}</td>
+        <td>{{course.subject}}</td>
+        <td>{{course.progression}}</td>  
+        <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
+        <td><button id="{{course.courseCode}}">Lägg till</button></td>   
+    </tbody> 
+
+ </table>
+    <div>
+        <ul>
+            <li *ngFor =" let course of filteredCourses ; let i=index" >{{course.courseCode}}</li>
+        </ul>
+    </div>
+

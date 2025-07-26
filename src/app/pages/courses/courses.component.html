@@ -9,14 +9,18 @@
      <p>Inga kurser matchar sökningen</p>
 }
 
-    <!-- <div>
+
+
+    <!-- <div> 
         <p>{{error()}}</p>
     </div> -->
 <!-- } -->
     <label for="selectAmne">Välj ämne</label>
     <select  name="selectAmne" id="" ><option *ngFor="let course of courses" id="{{course.subject}}"  value="" (click)="applyFilter2($event)" >{{course.subject}}</option></select>
     <!--{{course.subject}} [(ngModel)]="filterValue" (click)="filterSelect" -->
-
+    <div>
+    <p> Visar {{filteredCourses.length}} av {{courses.length}}</p>
+</div>
     <!--(click)="applyFilter2()" -->
 <table>
       <thead>
