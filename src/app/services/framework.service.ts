@@ -7,11 +7,9 @@ import { courses } from '../models/courses';
   providedIn: 'root'
 })
 export class FrameworkService {
+
   
-  // loadCourses(): Observable<courses[]>  {
-  //   let data= JSON.parse(localStorage.getItem("courses") as string)
-  //   return data
-    
+
   }
 
 

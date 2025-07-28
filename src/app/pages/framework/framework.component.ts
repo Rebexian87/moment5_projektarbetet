@@ -19,11 +19,15 @@ export class FrameworkComponent {
 
     storageCourses: courses[] = [];
 
-
+  courses: courses[] = [];
 
     filteredCourses: courses [] = [];
 
+    removeCourse: courses [] = [];
+
     storage:any
+
+     e:any ='';
 
 
    ngOnInit(){
@@ -53,7 +57,8 @@ export class FrameworkComponent {
   }
 
       loadItems(): void {
-          this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string)
+          this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string).flat()
+          
     }
     
    applyFilter ():void {
@@ -78,6 +83,8 @@ export class FrameworkComponent {
 
 
    }
+
+    
 
 
 

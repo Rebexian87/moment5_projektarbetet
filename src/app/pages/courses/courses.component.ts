@@ -21,9 +21,13 @@ export class CoursesComponent {
 
   sortedCourses: courses [] = [];
 
-  test: courses []=[];
+  test: object = {};
 
   e:any ='';
+
+  showOnlyOne: courses []=[]
+
+  // oldCourseArr: courses[] =[]
 
   
 
@@ -59,7 +63,7 @@ export class CoursesComponent {
    applyFilter2 (e:any):void {
        let push= e.target.id
 
-       console.log(push);
+      // console.log(push);
        
 
           this.filteredCourses= this.courses.filter((course)=>course.subject === push)
@@ -69,17 +73,37 @@ export class CoursesComponent {
 
    }
 
+
+  //  showOne(): void {
+  //   let showValue = new Set <courses> () ;
+  //   for (const value of this.courses) {
+  //     if(!showValue.has(value)) {
+  //       this.showOnlyOne.push(value);
+  //       showValue.add(value)
+  //     }
+  //   }
+  //  }
+
+
+
    
    
 storeCourse(e:any):void {
+
+
+
   let push= e.target.id
 
+  console.log(push);
+  
+      
+       let selectedCourse =  this.courses.find((course)=>course.courseCode === push)
      let oldCourseArr =JSON.parse(localStorage.getItem("courses") as string) || []  // Retrievs already stored data from localstorage and add the data ta an array or get an empty array if there is no data
     
-    this.test =  this.courses.filter((course)=>course.courseCode === push)
+    // this.test =  this.courses.filter((course)=>course.courseCode === push)
      console.log(this.test);
      
-   oldCourseArr.push(this.test)  //Add new course
+   oldCourseArr.push(selectedCourse)  //Add new course
    localStorage.setItem("courses", JSON.stringify(oldCourseArr)) 
 }
 

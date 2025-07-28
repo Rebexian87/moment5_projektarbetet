@@ -24,7 +24,9 @@
         <td>{{course.subject}}</td>
         <td>{{course.progression}}</td>  
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
-        <td><button id="{{course.courseCode}}">Lägg till</button></td>   
+        <td><button id="{{course.courseCode}}" >Ta bort</button></td>   
+
+        <!--(click)=" deleteCourse($event)"-->
     </tbody> 
 
  </table>
