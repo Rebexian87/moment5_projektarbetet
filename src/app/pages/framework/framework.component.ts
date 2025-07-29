@@ -29,6 +29,12 @@ export class FrameworkComponent {
 
      e:any ='';
 
+     sum: number =0
+
+     
+
+    
+
 
    ngOnInit(){
 
@@ -38,9 +44,10 @@ export class FrameworkComponent {
 
     // }
   this.loadItems()
+  
 
+this.add()
 
-    console.log(this.filteredCourses);
     
 
 
@@ -57,8 +64,11 @@ export class FrameworkComponent {
   }
 
       loadItems(): void {
-          this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string).flat()
+          this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string)
+
           
+          
+
     }
     
    applyFilter ():void {
@@ -85,6 +95,25 @@ export class FrameworkComponent {
    }
 
     
+    deleteCourse (e:any):void {
+       let push= e.target.id
+
+        console.log(push);   }
+
+
+
+    add() {
+            this.sum=0
+
+              for (let i=0; i<this.filteredCourses.length; i++) {
+                  this.sum += this.filteredCourses[i].points
+                
+    }
+
+             console.log(this.filteredCourses[0].points);
+             console.log(this.sum);
+             
+    }
 
 
 

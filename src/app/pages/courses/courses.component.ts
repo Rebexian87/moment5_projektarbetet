@@ -67,7 +67,7 @@ export class CoursesComponent {
        
 
           this.filteredCourses= this.courses.filter((course)=>course.subject === push)
-          console.log(this.filteredCourses);
+          // console.log(this.filteredCourses);
           
 
 
@@ -101,10 +101,10 @@ storeCourse(e:any):void {
      let oldCourseArr =JSON.parse(localStorage.getItem("courses") as string) || []  // Retrievs already stored data from localstorage and add the data ta an array or get an empty array if there is no data
     
     // this.test =  this.courses.filter((course)=>course.courseCode === push)
-     console.log(this.test);
+    //  console.log(this.test);
      
    oldCourseArr.push(selectedCourse)  //Add new course
-   localStorage.setItem("courses", JSON.stringify(oldCourseArr)) 
+   localStorage.setItem("courses", JSON.stringify(oldCourseArr.flat())) 
 }
 
 }
