@@ -28,7 +28,8 @@ export class CoursesComponent {
   e:any ='';
 
   showOnlyOne: test []=[]
-
+ 
+ 
 
 
    oldCourseArr: courses[] =[]
@@ -96,10 +97,13 @@ storeCourse(e:any):void {
   
       
        let selectedCourse =  this.courses.find((course)=>course.courseCode === push)
+
      let oldCourseArr =JSON.parse(localStorage.getItem("courses") as string) || []  // Retrievs already stored data from localstorage and add the data ta an array or get an empty array if there is no data
     
 
-   oldCourseArr.push(selectedCourse)  //Add new course
+
+   oldCourseArr.push(selectedCourse)  //Add new course}
+
    localStorage.setItem("courses", JSON.stringify(oldCourseArr.flat())) 
 }
 

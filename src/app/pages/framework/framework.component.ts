@@ -31,7 +31,7 @@ export class FrameworkComponent {
 
      sum: number =0
 
-     
+     showOnyOne: courses []=[]
 
     
 
@@ -63,41 +63,22 @@ export class FrameworkComponent {
   }
 
       loadItems(): void {
-          this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string)
-
-          
-          
-
-    }
-    
-   applyFilter ():void {
-          
-      //  let storage = JSON.parse(localStorage.getItem("courses") as any)
-      //   return storage.map((c: {   courseCode:string; courseName:string;points:number; progression:string; subject:string; syllabus:string}) =>
-      //   new courses(c.courseCode, c.courseName,c.points,c.progression, c.subject, c.syllabus)
-      //   )
-
-          // this.filteredCourses=
-          // for(let i=0; i<this.filteredCourses.length; i++) {
-            
-          // // }
-          //  let storageCourses = JSON.parse(localStorage.getItem("courses") as any)
-
-          //  for (let i = 0; i<storage.length;i++) {
-          //      console.log(storage[i].code)
-          //  } 
-
- 
-           
-
-
-   }
+         
+        
+        this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string).filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index);
+        // this.showOnlyOne=this.filteredCourses
+        console.log(this.filteredCourses[0]);
+        }
+  
 
     
     deleteCourse (e:any):void {
        let push= e.target.id
 
+          delete this.filteredCourses[push]
 
+           localStorage.setItem("courses", JSON.stringify(this.filteredCourses.flat())) 
+           this.loadItems()
        
         console.log(push);   }
 
