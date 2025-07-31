@@ -43,10 +43,9 @@ export class FrameworkComponent {
     // for (let i=0; i<this.filteredCourses.length; i++) {
 
     // }
-  this.loadItems()
+    this.loadItems()
   
-
-this.add()
+    this.add()
 
     
 
@@ -98,6 +97,8 @@ this.add()
     deleteCourse (e:any):void {
        let push= e.target.id
 
+
+       
         console.log(push);   }
 
 
@@ -114,6 +115,9 @@ this.add()
              console.log(this.sum);
              
     }
+
+
+    
 
 
 

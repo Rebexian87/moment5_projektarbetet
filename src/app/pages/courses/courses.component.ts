@@ -3,6 +3,8 @@ import { courses } from '../../models/courses';
 import { CoursesService } from '../../services/courses.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { distinct, Subject } from 'rxjs';
+import { test } from '../../models/test';
 
 @Component({
   selector: 'app-courses',
@@ -21,24 +23,31 @@ export class CoursesComponent {
 
   sortedCourses: courses [] = [];
 
-  test: object = {};
+  test: test[]=[];
 
   e:any ='';
 
-  showOnlyOne: courses []=[]
+  showOnlyOne: test []=[]
 
-  // oldCourseArr: courses[] =[]
+
+
+   oldCourseArr: courses[] =[]
 
   
 
   constructor(private CoursesService: CoursesService) {}
 
-  ngOnInit(){
-      this.CoursesService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=courses; })
+  ngOnInit(): void{
+      this.CoursesService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=courses; })  
+      this.CoursesService.loadCourses().subscribe((test)=> {this.showOnlyOne=test.filter((course, index, self) => self.findIndex(c=>c.subject === course.subject) ===index) })
+            console.log(this.showOnlyOne);//[0].points
+
  
-  }
+  
+    }
 
 
+ 
 
   applyFilter(): void {
    this.filteredCourses=this.courses.filter((course) => course.courseCode.toLowerCase().includes(this.filterValue.toLowerCase()) || course.subject.toLowerCase().includes(this.filterValue.toLowerCase()))
@@ -73,16 +82,6 @@ export class CoursesComponent {
 
    }
 
-
-  //  showOne(): void {
-  //   let showValue = new Set <courses> () ;
-  //   for (const value of this.courses) {
-  //     if(!showValue.has(value)) {
-  //       this.showOnlyOne.push(value);
-  //       showValue.add(value)
-  //     }
-  //   }
-  //  }
 
 
 

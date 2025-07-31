@@ -2,12 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { courses } from '../models/courses';
 import { Observable } from 'rxjs';
+import { test } from '../models/test';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
-   url: string = "https://matdah.github.io/DT208G---Programmering-i-TypeScript/Moment%205%20-%20Projekt/miun_courses.json";
+   url: string = "miun_courses.json";
 
   constructor(private http: HttpClient){ }
 
@@ -18,6 +20,13 @@ export class CoursesService {
   loadCourses(): Observable<courses[]> {
 
     return this.http.get<courses[]>(this.url);
+   
+
+  }
+
+    loadCourses2(): Observable<test[]> {
+
+    return this.http.get<test[]>(this.url);
    
 
   }

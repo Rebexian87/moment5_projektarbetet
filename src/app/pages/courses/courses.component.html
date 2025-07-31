@@ -16,13 +16,18 @@
     </div> -->
 <!-- } -->
     <label for="selectAmne">Välj ämne</label>
-    <select  name="selectAmne" id="" ><option *ngFor="let course of courses" id="{{course.subject}}" 
-         value="" (click)="applyFilter2($event)" >{{course.subject}}</option></select>
-    <!--{{course.subject}} [(ngModel)]="filterValue" (click)="filterSelect" -->
+    <select  name="selectAmne" id="" ><option *ngFor="let course of showOnlyOne" id="{{course.subject}}" 
+         value="" (change)="applyFilter2($event)" >{{course.subject}}</option></select>
+
+     
+    
+    
+  
+    
     <div>
     <p> Visar {{filteredCourses.length}} av {{courses.length}}</p>
 </div>
-    <!--(click)="applyFilter2()" -->
+
 <table>
       <thead>
 <tr>
