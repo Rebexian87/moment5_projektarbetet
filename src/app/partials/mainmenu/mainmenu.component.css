@@ -1,0 +1,28 @@
+header {       /*meny, använder nesting*/
+        height: 80px;
+        background-color: rgb(173, 88, 230);   /*bakgrundsfärg från variabel*/
+        position: relative;
+        padding: 0 1em;
+        justify-content: space-between;
+        align-items: center;
+        position: static;
+        display: flex; }
+
+nav {    
+        font-size: 1.4em;}
+    li {
+        display: inline;
+           
+         }       
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+        color: white; /*textfärg från variabel*/
+        display: inline;
+    }
+
+    .active {
+        color: rgb(36, 87, 70);
+    }
