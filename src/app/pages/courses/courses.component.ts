@@ -28,6 +28,8 @@ export class CoursesComponent {
   e:any ='';
 
   showOnlyOne: test []=[]
+
+  selectedCourse:any
  
  
 
@@ -41,7 +43,7 @@ export class CoursesComponent {
   ngOnInit(): void{
       this.CoursesService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=courses; })  
       this.CoursesService.loadCourses().subscribe((test)=> {this.showOnlyOne=test.filter((course, index, self) => self.findIndex(c=>c.subject === course.subject) ===index) })
-            console.log(this.showOnlyOne);
+           // console.log(this.showOnlyOne);
 
  
   
@@ -96,15 +98,21 @@ storeCourse(e:any):void {
   console.log(push);
   
       
-       let selectedCourse =  this.courses.find((course)=>course.courseCode === push)
+      this.selectedCourse =  this.courses.find((course)=>course.courseCode === push)
 
-     let oldCourseArr =JSON.parse(localStorage.getItem("courses") as string) || []  // Retrievs already stored data from localstorage and add the data ta an array or get an empty array if there is no data
+
+     this.oldCourseArr =JSON.parse(localStorage.getItem("courses") as string) || []  // Retrievs already stored data from localstorage and add the data ta an array or get an empty array if there is no data
     
+       let oldCourses=this.oldCourseArr.find((course)=>course.courseCode===push)
 
+       console.log(oldCourses);
+       
 
-   oldCourseArr.push(selectedCourse)  //Add new course}
+       if(!oldCourses) {
+  
+   this.oldCourseArr.push(this.selectedCourse)  //Add new course}
 
-   localStorage.setItem("courses", JSON.stringify(oldCourseArr.flat())) 
+   localStorage.setItem("courses", JSON.stringify(this.oldCourseArr.flat())) }
 }
 
 }
