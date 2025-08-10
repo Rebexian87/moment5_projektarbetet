@@ -76,6 +76,8 @@ export class FrameworkComponent {
         //JSON.parse(localStorage.getItem("courses") as string).filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index);}
         // this.showOnlyOne=this.filteredCourses
         console.log(this.filteredCourses[0]);
+
+
         
       
       }
@@ -90,7 +92,11 @@ export class FrameworkComponent {
            localStorage.setItem("courses", JSON.stringify(this.filteredCourses.flat())) 
            this.loadItems()
        
-        console.log(push);   }
+        console.log(push);  
+        this.add()
+ 
+
+      }
 
 
 
@@ -104,6 +110,7 @@ export class FrameworkComponent {
 
          
              console.log(this.sum);
+            
              
     }
 
