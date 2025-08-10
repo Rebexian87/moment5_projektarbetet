@@ -37,48 +37,20 @@ export class FrameworkComponent {
 
 
    ngOnInit(){
+ 
 
-    
-
-    // this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string)
-
-    // for (let i=0; i<this.filteredCourses.length; i++) {
-
-    // }
-    this.loadItems()
+   this.loadItems()
   
-    this.add()
-
-    
-
-
-      //  this.FrameworkService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string); })
-    //  console.log(this.filteredCourses);
-    //            let storage = JSON.parse(localStorage.getItem("courses") as any)
-
-          //  for (let i = 0; i<storage.length;i++) {
-          //      console.log(storage[i].code)
-          //  } 
-
-     
+    this.add()    
       
   }
 
       loadItems(): void {
-
-
-
-
          
         if(JSON.parse(localStorage.getItem("courses") as string)) {
         this.filteredCourses=this.FrameworkService.loadCourses("courses")}
-        
-        //JSON.parse(localStorage.getItem("courses") as string).filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index);}
-        // this.showOnlyOne=this.filteredCourses
-        console.log(this.filteredCourses[0]);
-
-
-        
+       
+        console.log(this.filteredCourses[0]);      
       
       }
   
@@ -100,24 +72,19 @@ export class FrameworkComponent {
 
 
 
-    add() {
+    add(): number {
             this.sum=0
 
               for (let i=0; i<this.filteredCourses.length; i++) {
                   this.sum += this.filteredCourses[i].points
                 
     }
-
          
              console.log(this.sum);
+             return this.sum
             
              
     }
-
-
-    
-
-
 
 }
 

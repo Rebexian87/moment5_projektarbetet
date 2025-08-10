@@ -43,14 +43,8 @@ export class CoursesComponent {
   ngOnInit(): void{
       this.CoursesService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=courses; })  
       this.CoursesService.loadCourses().subscribe((test)=> {this.showOnlyOne=test.filter((course, index, self) => self.findIndex(c=>c.subject === course.subject) ===index) })
-           // console.log(this.showOnlyOne);
-
- 
-  
-    }
-
-
- 
+       
+   }
 
   applyFilter(): void {
    this.filteredCourses=this.courses.filter((course) => course.courseCode.toLowerCase().includes(this.filterValue.toLowerCase()) || course.subject.toLowerCase().includes(this.filterValue.toLowerCase()) || course.courseName.toLowerCase().includes(this.filterValue.toLowerCase()))
@@ -73,29 +67,18 @@ export class CoursesComponent {
   }
   
    applyFilter2 (e:any):void {
-       let push= e.target.value
-
-   
-       
-
-          this.filteredCourses= this.courses.filter((course)=>course.subject === push)
+       let push= e.target.value 
+       this.filteredCourses= this.courses.filter((course)=>course.subject === push)
       
+ }
 
+ 
 
-   }
+  storeCourse(e:any):void {
 
+    let push= e.target.id
 
-
-
-   
-   
-storeCourse(e:any):void {
-
-
-
-  let push= e.target.id
-
-  console.log(push);
+    console.log(push);
   
       
       this.selectedCourse =  this.courses.find((course)=>course.courseCode === push)
