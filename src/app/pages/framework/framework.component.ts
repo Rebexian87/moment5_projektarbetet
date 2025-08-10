@@ -38,6 +38,8 @@ export class FrameworkComponent {
 
    ngOnInit(){
 
+    
+
     // this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string)
 
     // for (let i=0; i<this.filteredCourses.length; i++) {
@@ -63,12 +65,20 @@ export class FrameworkComponent {
   }
 
       loadItems(): void {
+
+
+
+
          
         if(JSON.parse(localStorage.getItem("courses") as string)) {
-        this.filteredCourses=JSON.parse(localStorage.getItem("courses") as string).filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index);}
+        this.filteredCourses=this.FrameworkService.loadCourses("courses")}
+        
+        //JSON.parse(localStorage.getItem("courses") as string).filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index);}
         // this.showOnlyOne=this.filteredCourses
         console.log(this.filteredCourses[0]);
-        }
+        
+      
+      }
   
 
     

@@ -51,7 +51,7 @@ export class CoursesComponent {
  
 
   applyFilter(): void {
-   this.filteredCourses=this.courses.filter((course) => course.courseCode.toLowerCase().includes(this.filterValue.toLowerCase()) || course.subject.toLowerCase().includes(this.filterValue.toLowerCase()))
+   this.filteredCourses=this.courses.filter((course) => course.courseCode.toLowerCase().includes(this.filterValue.toLowerCase()) || course.subject.toLowerCase().includes(this.filterValue.toLowerCase()) || course.courseName.toLowerCase().includes(this.filterValue.toLowerCase()))
       
   }
 
@@ -71,7 +71,7 @@ export class CoursesComponent {
   }
   
    applyFilter2 (e:any):void {
-       let push= e.target.id
+       let push= e.target.value
 
    
        

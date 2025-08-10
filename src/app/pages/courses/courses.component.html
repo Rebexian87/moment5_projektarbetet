@@ -16,8 +16,8 @@
     </div> -->
 <!-- } -->
     <label for="selectAmne">Välj ämne</label>
-    <select  name="selectAmne" id="" ><option *ngFor="let course of showOnlyOne" id="{{course.subject}}" 
-         value="" (change)="applyFilter2($event)" >{{course.subject}}</option></select>
+    <select (change)="applyFilter2($event)"  name="selectAmne" id="" ><option *ngFor="let course of showOnlyOne" [value]="course.subject" id="{{course.subject}}" 
+         >{{course.subject}}</option></select>
 
      
     
