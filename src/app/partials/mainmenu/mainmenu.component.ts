@@ -11,6 +11,7 @@ export class MainmenuComponent {
 
 
     logoImage: string = "logo.svg"; 
+   logoImage2: string = "logo2.svg"; 
    
 
     

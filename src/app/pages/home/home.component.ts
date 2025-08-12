@@ -18,6 +18,9 @@ export class HomeComponent {
 
 
   frontImage: string = "bild1.jpg"; 
+  imageGrasFlowers: string = "blommor.jpg"; //https://pixabay.com/sv/photos/blomster%C3%A4ng-v%C3%A5r-natur-%C3%A4ng-n%C3%A4rbild-7955256/
+  imageStudent:string="bildStudent.png"
+  imageBooks:string="bildBooks.jpg"
    constructor(private router:Router) {}
 
    navigateTo() {
@@ -25,6 +28,9 @@ export class HomeComponent {
    }
 
  
+   //https://pixabay.com/sv/illustrations/sk%C3%B6nhet-sk%C3%B6n-kvinna-h%C3%A4lsa-l%C3%A4sning-9596371/
+
+  // https://pixabay.com/sv/illustrations/student-informationssystem-2317832/
 
   // courses: courses[] = [];
 

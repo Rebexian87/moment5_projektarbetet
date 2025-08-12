@@ -2,13 +2,13 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="42.262203mm"
-   height="16.251339mm"
-   viewBox="0 0 42.262202 16.251339"
+   width="23.55752mm"
+   height="9.6794224mm"
+   viewBox="0 0 23.55752 9.6794222"
    version="1.1"
    id="svg1"
    inkscape:version="1.4 (86a8ad7, 2024-10-11)"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="logo2.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,14 +23,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.0467522"
-     inkscape:cx="42.512449"
-     inkscape:cy="3.3436758"
-     inkscape:window-width="2560"
-     inkscape:window-height="1377"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
+     inkscape:zoom="4.1870088"
+     inkscape:cx="48.363882"
+     inkscape:cy="67.470601"
+     inkscape:window-width="1150"
+     inkscape:window-height="1211"
+     inkscape:window-x="672"
+     inkscape:window-y="419"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
@@ -69,18 +69,18 @@
      inkscape:label="Lager 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-42.676477,-66.74335)">
+     transform="translate(-47.731796,-70.787603)">
     <text
        xml:space="preserve"
-       transform="matrix(0.07170086,0,0,0.0848469,54.261775,35.527635)"
+       transform="matrix(0.04197543,0,0,0.05053547,53.330309,52.044733)"
        id="text1"
-       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';text-align:start;letter-spacing:10px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#9acbe2;fill-opacity:1;fill-rule:evenodd"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';text-align:start;letter-spacing:10px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#ff820e;fill-opacity:1;fill-rule:evenodd"><tspan
          x="115.5957"
          y="532.90234"
-         id="tspan2">BX</tspan></text>
+         id="tspan1">BX</tspan></text>
     <path
        sodipodi:type="star"
-       style="fill:#9acbe2;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       style="fill:#ff820e;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
        id="path5"
        inkscape:flatsided="false"
        sodipodi:sides="9"
@@ -93,9 +93,9 @@
        inkscape:rounded="0"
        inkscape:randomized="0"
        d="m 220.91746,27.045957 -12.15543,-4.66004 -1.52591,12.92834 -6.31618,-11.383156 -9.47908,8.92285 2.47847,-12.779966 -12.9969,0.74226 10.11343,-8.196888 -10.43332,-7.7856426 13.01619,0.2216051 -2.98787,-12.6705556 9.82854,8.53640632 5.85563,-11.62677522 2.042,12.8569284 11.95923,-5.1426972 -6.70002,11.1615505 12.46696,3.7477063 -12.30701,4.243559 z"
-       inkscape:transform-center-x="-0.12301448"
-       inkscape:transform-center-y="0.67436295"
-       transform="matrix(0.23271128,0.26595829,-0.26172972,0.23647102,6.7248856,17.844274)" />
+       inkscape:transform-center-x="-0.070873795"
+       inkscape:transform-center-y="0.40165327"
+       transform="matrix(0.13407328,0.15840681,-0.15079184,0.14084397,27.018801,41.662936)" />
     <text
        xml:space="preserve"
        transform="scale(0.26458333)"

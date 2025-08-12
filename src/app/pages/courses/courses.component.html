@@ -1,4 +1,7 @@
 <h2 class="position1">Kurser på vårt universitet</h2>
+<p>Lägg till kurser och se dina tillagda kurser: <button (click)="navigateTo()">Ramschema</button></p>
+    <p> Visar {{filteredCourses.length}} av {{courses.length}} kurser</p>
+
 
 <div class="position2">
     <label for="filter" class="label">Sök kurs</label> <br>
@@ -23,7 +26,7 @@
   
     
     <div class="position4">
-    <p> Visar {{filteredCourses.length}} av {{courses.length}} kurser</p>
+
 </div>
 
 
@@ -32,11 +35,11 @@
 <table class="courses">
       <thead>
 <tr>
-    <th  (click)="sort1()">Kurskod</th>
+    <th class="th_td1" (click)="sort1()">Kurskod</th>
     <th  (click)="sort2()">Namn</th>
-       <th  (click)="sort3()">Poäng</th>
-          <th  (click)="sort3()">Ämne</th>
-    <th  (click)="sort3()">Progression</th>
+       <th class="th_td3" (click)="sort3()">Poäng</th>
+          <th class="th_td4" (click)="sort3()">Ämne</th>
+ 
     <th>Länk</th>
     
 </tr>
@@ -45,11 +48,11 @@
     
    <tbody >
     <tr *ngFor="let course of filteredCourses" >
-        <td>{{course.courseCode}}</td>
+        <td class="th_td1">{{course.courseCode}}</td>
         <td>{{course.courseName}}</td>
-            <td>{{course.points}}</td>
-        <td>{{course.subject}}</td>
-        <td>{{course.progression}}</td>  
+            <td class="th_td3">{{course.points}}</td>
+        <td class="th_td4">{{course.subject}}</td>
+       
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
          
         <td><button id="{{course.courseCode}}" (click)="storeCourse($event)">{{textOnButton}}</button>

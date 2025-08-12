@@ -7,6 +7,8 @@
    <p> Du har lagt till {{filteredCourses.length}} kurser. Totala antalet poäng för  dessa är {{sum}}</p>
 
    <p>Om du vill ta bort alla kurser: <button (click)="clearLocalstorage()">Rensa tabell</button></p>
+
+   <p>Vill du lägga till fler kurser:  <button (click)="navigateTo()">Våra kurser</button></p>
           
 
 <table>
@@ -14,24 +16,24 @@
 
       <thead>
 <tr>
-        <th>Kurskod</th>
+        <th  class="th_td1">Kurskod</th>
         <th>Namn</th>
-        <th>Poäng</th>
-        <th>Ämne</th>
-        <th>Progression</th>
+        <th class="th_td3">Poäng</th>
+        <th class="th_td4">Ämne</th>
+    
         <th>Länk</th>    
 </tr>
     </thead>
 
    <tbody > 
     <tr *ngFor="let course of filteredCourses; let i=index">
-        <td>{{course.courseCode}}</td>
+        <td  class="th_td1">{{course.courseCode}}</td>
         <td>{{course.courseName}}</td>
-            <td>{{course.points}}</td>
-        <td>{{course.subject}}</td>
-        <td>{{course.progression}}</td>  
+            <td class="th_td3">{{course.points}}</td>
+        <td class="th_td4">{{course.subject}}</td>
+         
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
-        <td><button id="{{i}}" (click)="deleteCourse($event)" >Ta bort</button></td>   
+        <td><button id="{{i}}" (click)="deleteCourse($event)" >Ta bort kurs</button></td>   
         </tr>
 
         <!--(click)=" deleteCourse($event)"-->

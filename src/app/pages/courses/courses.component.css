@@ -20,6 +20,9 @@ td {
 
 }
 
+p{
+    text-align: center;
+}
 
 
 
@@ -42,3 +45,33 @@ button {
     padding: 0.2em;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 950px) {
+
+    .th_td1 {
+        display: none;
+    }
+    
+
+ }
+
+ @media only screen and (max-width: 850px) {
+
+    .th_td4 {
+        display: none;
+    }
+
+ }
+
+  @media only screen and (max-width: 570px) {
+
+    .th_td3 {
+        display: none;
+    }
+
+    td{
+        font-size: 0.8em;
+    }
+ }
+
+

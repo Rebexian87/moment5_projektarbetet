@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { distinct, Subject } from 'rxjs';
 import { test } from '../../models/test';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -32,7 +33,7 @@ export class CoursesComponent {
 
   selectedCourse:any
 
-  textOnButton="Lägg till"
+  textOnButton="Lägg till kurs"
  
  
 
@@ -41,7 +42,11 @@ export class CoursesComponent {
 
   
 
-  constructor(private CoursesService: CoursesService) {}
+  constructor(private CoursesService: CoursesService, private router:Router ) {}
+
+     navigateTo() {
+    this.router.navigate(['/framework'])
+   }
 
   ngOnInit(): void{
       this.CoursesService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=courses; })  

@@ -3,6 +3,7 @@ import { courses } from '../../models/courses';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FrameworkService } from '../../services/framework.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-framework',
@@ -14,7 +15,11 @@ export class FrameworkComponent {
   [x: string]: any;
 
   
-  constructor(private FrameworkService: FrameworkService ) {}
+  constructor(private FrameworkService: FrameworkService, private router:Router ) {}
+   navigateTo() {
+    this.router.navigate(['/courses'])
+   }
+
 
 
     storageCourses: courses[] = [];
@@ -98,6 +103,7 @@ export class FrameworkComponent {
        
     }
 
+    
 }
 
 

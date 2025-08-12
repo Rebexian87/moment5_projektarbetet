@@ -1,3 +1,56 @@
+#nameUni2{
+    display:none
+ 
+}
+
+.logo2 {
+    display: none;
+}
+
+@media only screen and (max-width: 670px) { 
+
+.logoImg {
+    display: none;
+}
+
+
+}
+
+@media only screen and (max-width: 910px) {
+            /* .logo1 {
+              display: block;
+              text-align: center; 
+                  
+
+            }
+            .logo2 {
+                display: none;
+            } */
+            /* #nameUni1{
+                color: black;
+            } */
+
+            #nameUni2{
+    display:block
+ 
+}
+
+       #nameUni1{
+    display:none
+ 
+}
+
+
+     }
+
+     @media only screen and (max-width: 820px) {
+                      #nameUni2{
+    display:none
+ 
+}
+    }
+
+
 header {       /*meny, använder nesting*/
         height: 140px;
         /*background-color: rgb(64, 57, 163);   bakgrundsfärg från variabel*/
@@ -9,7 +62,10 @@ header {       /*meny, använder nesting*/
         justify-content: space-between;
         align-items: center;
         position: static;
-        display: flex; }
+        display: flex; 
+    
+    
+    }
 
 nav {    
         font-size: 1.4em;}
