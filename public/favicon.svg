@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="15.598116mm"
+   height="15.493041mm"
+   viewBox="0 0 15.598116 15.493041"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   sodipodi:docname="favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0467522"
+     inkscape:cx="108.43062"
+     inkscape:cy="237.40097"
+     inkscape:window-width="1150"
+     inkscape:window-height="1211"
+     inkscape:window-x="738"
+     inkscape:window-y="589"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="131.83635"
+       y="126.10434"
+       width="698.35052"
+       height="321.94821"
+       id="rect8" />
+    <rect
+       x="139.47903"
+       y="162.4071"
+       width="594.21893"
+       height="229.28062"
+       id="rect7" />
+    <rect
+       x="-213.99524"
+       y="-337.23358"
+       width="801.52679"
+       height="211.12923"
+       id="rect6" />
+    <rect
+       x="-171.00513"
+       y="-294.24347"
+       width="448.05255"
+       height="256.98535"
+       id="rect5" />
+    <rect
+       x="115.59564"
+       y="363.02765"
+       width="490.08731"
+       height="371.62567"
+       id="rect1" />
+  </defs>
+  <g
+     inkscape:label="Lager 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-45.22128,-67.501647)">
+    <path
+       sodipodi:type="star"
+       style="fill:#ff820e;fill-opacity:1;fill-rule:evenodd;stroke-width:0.264583"
+       id="path5"
+       inkscape:flatsided="false"
+       sodipodi:sides="9"
+       sodipodi:cx="202.71831"
+       sodipodi:cy="12.385532"
+       sodipodi:r1="23.369576"
+       sodipodi:r2="11.684788"
+       sodipodi:arg1="0.67811931"
+       sodipodi:arg2="1.0271852"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 220.91746,27.045957 -12.15543,-4.66004 -1.52591,12.92834 -6.31618,-11.383156 -9.47908,8.92285 2.47847,-12.779966 -12.9969,0.74226 10.11343,-8.196888 -10.43332,-7.7856426 13.01619,0.2216051 -2.98787,-12.6705556 9.82854,8.53640632 5.85563,-11.62677522 2.042,12.8569284 11.95923,-5.1426972 -6.70002,11.1615505 12.46696,3.7477063 -12.30701,4.243559 z"
+       inkscape:transform-center-x="-0.11916954"
+       inkscape:transform-center-y="0.64289671"
+       transform="matrix(0.22543714,0.25354851,-0.25354851,0.22543714,10.393471,20.884233)" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text5"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';text-align:start;letter-spacing:10px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect5);display:inline;fill:#ff820e;fill-opacity:1;fill-rule:evenodd" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text6"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';text-align:start;letter-spacing:10px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect6);display:inline;fill:#ff820e;fill-opacity:1;fill-rule:evenodd" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text7"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';text-align:start;letter-spacing:10px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect7);display:inline;fill:#ff820e;fill-opacity:1;fill-rule:evenodd" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text8"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:192px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold Italic';text-align:start;letter-spacing:10px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect8);display:inline;fill:#ff820e;fill-opacity:1;fill-rule:evenodd" />
+  </g>
+</svg>

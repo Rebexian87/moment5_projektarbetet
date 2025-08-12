@@ -3,6 +3,8 @@ import { courses } from '../../models/courses';
 import { CoursesService } from '../../services/courses.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { CoursesComponent } from '../courses/courses.component';
+import { Router } from '@angular/router';
 
 
 
@@ -15,6 +17,14 @@ import { CommonModule } from '@angular/common';
 export class HomeComponent {
 
 
+  frontImage: string = "bild1.jpg"; 
+   constructor(private router:Router) {}
+
+   navigateTo() {
+    this.router.navigate(['/courses'])
+   }
+
+ 
 
   // courses: courses[] = [];
 

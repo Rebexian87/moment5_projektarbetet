@@ -26,3 +26,8 @@ td {
     height: 35px;
 }
 */
+
+img {
+    width: 100%;
+    max-width: 50%;
+}

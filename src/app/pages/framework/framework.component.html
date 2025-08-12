@@ -4,6 +4,11 @@
      <p>Det finns inga valda kurser</p>
 }
 
+   <p> Du har lagt till {{filteredCourses.length}} kurser. Totala antalet poäng för  dessa är {{sum}}</p>
+
+   <p>Om du vill ta bort alla kurser: <button (click)="clearLocalstorage()">Rensa tabell</button></p>
+          
+
 <table>
 
 
@@ -18,7 +23,8 @@
 </tr>
     </thead>
 
-   <tbody *ngFor="let course of filteredCourses; let i=index"> 
+   <tbody > 
+    <tr *ngFor="let course of filteredCourses; let i=index">
         <td>{{course.courseCode}}</td>
         <td>{{course.courseName}}</td>
             <td>{{course.points}}</td>
@@ -26,24 +32,17 @@
         <td>{{course.progression}}</td>  
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
         <td><button id="{{i}}" (click)="deleteCourse($event)" >Ta bort</button></td>   
+        </tr>
 
         <!--(click)=" deleteCourse($event)"-->
     </tbody> 
+
 
     
 
  </table>
 
-    <div>
-        <ul>
-            <li *ngFor =" let course of filteredCourses ; let i=index" >{{course.courseCode}}</li>
-        </ul>
-    </div>
+   
 
 
-    <div>
-            <p> Du har lagt till {{filteredCourses.length}} kurser</p>
-            <p >Totala antalet poäng: {{sum}}</p>
-        
-    </div>
-
+    

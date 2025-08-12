@@ -8,7 +8,11 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './mainmenu.component.css'
 })
 export class MainmenuComponent {
-  
 
+
+    logoImage: string = "logo.svg"; 
+   
+
+    
 
 }

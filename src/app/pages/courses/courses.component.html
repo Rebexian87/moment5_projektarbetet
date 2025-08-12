@@ -1,34 +1,35 @@
-<h1>Kurser</h1>
+<h2 class="position1">Kurser på vårt universitet</h2>
 
-<div>
-    <label for="filter">Filter</label>
+<div class="position2">
+    <label for="filter" class="label">Sök kurs</label> <br>
     <input type="text" id="filter" [(ngModel)]="filterValue" (input)="applyFilter()">
-</div>
-
-@if(filteredCourses.length === 0) {
+    @if(filteredCourses.length === 0) {
      <p>Inga kurser matchar sökningen</p>
 }
 
+</div>
 
 
-    <!-- <div> 
-        <p>{{error()}}</p>
-    </div> -->
-<!-- } -->
-    <label for="selectAmne">Välj ämne</label>
-    <select (change)="applyFilter2($event)"  name="selectAmne" id="" ><option *ngFor="let course of showOnlyOne" [value]="course.subject" id="{{course.subject}}" 
+
+
+    <div class="position3">
+    <label for="selectAmne" class="label">Välj ämne</label> <br>
+    <select (change)="applyFilter2($event)"  name="selectAmne" id="selectAmne" ><option *ngFor="let course of showOnlyOne" [value]="course.subject" id="{{course.subject}}" 
          >{{course.subject}}</option></select>
 
-     
+     </div>
     
     
   
     
-    <div>
-    <p> Visar {{filteredCourses.length}} av {{courses.length}}</p>
+    <div class="position4">
+    <p> Visar {{filteredCourses.length}} av {{courses.length}} kurser</p>
 </div>
 
-<table>
+
+   
+
+<table class="courses">
       <thead>
 <tr>
     <th  (click)="sort1()">Kurskod</th>
@@ -42,18 +43,20 @@
     </thead>
 
     
-   <tbody *ngFor="let course of filteredCourses">
+   <tbody >
+    <tr *ngFor="let course of filteredCourses" >
         <td>{{course.courseCode}}</td>
         <td>{{course.courseName}}</td>
             <td>{{course.points}}</td>
         <td>{{course.subject}}</td>
         <td>{{course.progression}}</td>  
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
-        <td><button id="{{course.courseCode}}" (click)="storeCourse($event)">Lägg till</button></td>  
+         
+        <td><button id="{{course.courseCode}}" (click)="storeCourse($event)">{{textOnButton}}</button>
+            </tr>
     </tbody>
 
-    
-
+ <!-- <td><button id="{{course.courseCode}}" (click)="storeCourse($event)">Lägg till</button></td>   -->
 
 </table>
 

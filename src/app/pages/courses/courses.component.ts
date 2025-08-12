@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { distinct, Subject } from 'rxjs';
 import { test } from '../../models/test';
 
+
 @Component({
   selector: 'app-courses',
   imports: [FormsModule, CommonModule],
@@ -30,6 +31,8 @@ export class CoursesComponent {
   showOnlyOne: test []=[]
 
   selectedCourse:any
+
+  textOnButton="Lägg till"
  
  
 
@@ -95,8 +98,17 @@ export class CoursesComponent {
   
    this.oldCourseArr.push(this.selectedCourse)  //Add new course}
 
-   localStorage.setItem("courses", JSON.stringify(this.oldCourseArr.flat())) }
+   localStorage.setItem("courses", JSON.stringify(this.oldCourseArr.flat())) 
+
+  //  if(this.selectedCourse) { this.textOnButton="Tillagd"}
+  
+    // this.textOnButton="Tillagd"
+  }
+
+ 
 }
+
+      
 
 }
 

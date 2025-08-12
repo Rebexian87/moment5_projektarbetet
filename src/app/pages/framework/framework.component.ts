@@ -46,6 +46,7 @@ export class FrameworkComponent {
   }
 
       loadItems(): void {
+        this.filteredCourses=[]
          
         if(JSON.parse(localStorage.getItem("courses") as string)) {
         this.filteredCourses=this.FrameworkService.loadCourses("courses")}
@@ -79,11 +80,22 @@ export class FrameworkComponent {
                   this.sum += this.filteredCourses[i].points
                 
     }
+
+
          
              console.log(this.sum);
              return this.sum
             
              
+    }
+
+    clearLocalstorage() {
+      localStorage.removeItem("courses")
+      this.loadItems()
+
+           
+      
+       
     }
 
 }
