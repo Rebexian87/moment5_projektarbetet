@@ -17,7 +17,7 @@
 
     <div class="position3">
     <label for="selectAmne" class="label">Välj ämne</label> <br>
-    <select (change)="applyFilter2($event)"  name="selectAmne" id="selectAmne" ><option *ngFor="let course of showOnlyOne" [value]="course.subject" id="{{course.subject}}" 
+    <select (change)="applyFilter2($event)"  name="selectAmne" id="selectAmne" ><option (click)="showAll()">Alla</option><option *ngFor="let course of showOnlyOne" [value]="course.subject" id="{{course.subject}}" 
          >{{course.subject}}</option></select>
 
      </div>
@@ -38,7 +38,7 @@
     <th class="th_td1" (click)="sort1()">Kurskod</th>
     <th  (click)="sort2()">Namn</th>
        <th class="th_td3" (click)="sort3()">Poäng</th>
-          <th class="th_td4" (click)="sort3()">Ämne</th>
+          <th class="th_td4" (click)="sort4()">Ämne</th>
  
     <th>Länk</th>
     

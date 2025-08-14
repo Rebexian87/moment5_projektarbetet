@@ -4,7 +4,7 @@ import { CoursesService } from '../../services/courses.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { distinct, Subject } from 'rxjs';
-import { test } from '../../models/test';
+
 import { Router } from '@angular/router';
 
 
@@ -25,11 +25,11 @@ export class CoursesComponent {
 
   sortedCourses: courses [] = [];
 
-  test: test[]=[];
+ 
 
   e:any ='';
 
-  showOnlyOne: test []=[]
+  showOnlyOne: courses []=[]
 
   selectedCourse:any
 
@@ -50,7 +50,7 @@ export class CoursesComponent {
 
   ngOnInit(): void{
       this.CoursesService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=courses; })  
-      this.CoursesService.loadCourses().subscribe((test)=> {this.showOnlyOne=test.filter((course, index, self) => self.findIndex(c=>c.subject === course.subject) ===index) })
+      this.CoursesService.loadCourses().subscribe((courses)=> {this.showOnlyOne=courses.filter((course, index, self) => self.findIndex(c=>c.subject === course.subject) ===index) })
        
    }
 
@@ -70,7 +70,12 @@ export class CoursesComponent {
   }
 
    sort3(): void{
-      this.sortedCourses=this.courses.sort((a, b) => a.progression > b.progression ? 1:-1)
+      this.sortedCourses=this.courses.sort((a, b) => b.points-a.points)
+
+  }
+
+   sort4(): void{
+      this.sortedCourses=this.courses.sort((a, b) => a.subject > b.subject ? 1:-1)
 
   }
   
@@ -78,6 +83,10 @@ export class CoursesComponent {
        let push= e.target.value 
        this.filteredCourses= this.courses.filter((course)=>course.subject === push)
       
+ }
+
+ showAll():void{
+        this.CoursesService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=courses; })  
  }
 
  
@@ -112,6 +121,8 @@ export class CoursesComponent {
 
  
 }
+
+
 
       
 

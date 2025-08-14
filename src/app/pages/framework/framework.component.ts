@@ -24,7 +24,7 @@ export class FrameworkComponent {
 
     storageCourses: courses[] = [];
 
-  courses: courses[] = [];
+    courses: courses[] = [];
 
     filteredCourses: courses [] = [];
 

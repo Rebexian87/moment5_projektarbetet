@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { courses } from '../models/courses';
 import { Observable } from 'rxjs';
-import { test } from '../models/test';
+
 
 
 @Injectable({
@@ -24,12 +24,7 @@ export class CoursesService {
 
   }
 
-    loadCourses2(): Observable<test[]> {
 
-    return this.http.get<test[]>(this.url);
-   
-
-  }
 
   
    
