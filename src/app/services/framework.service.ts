@@ -10,16 +10,12 @@ export class FrameworkService {
 
    courses: courses[] = [];
 
+     // Reads courses from localstorage
+
     loadCourses(key:string): any{
-
-      
-
-      
+        
         return JSON.parse(localStorage.getItem(key) as string).filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index); //.filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index);}
-        // this.showOnlyOne=this.filteredCourses
-        // console.log(this.filteredCourses[0]);
-
-  }
+      }
 
   
 

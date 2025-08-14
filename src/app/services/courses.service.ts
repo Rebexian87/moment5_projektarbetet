@@ -8,25 +8,20 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CoursesService {
    url: string = "miun_courses.json";
 
   constructor(private http: HttpClient){ }
 
-  // http = inject(HttpClient);
 
-  // Läs in kurser
+  // Reads courses from API
 
-  loadCourses(): Observable<courses[]> {
+    loadCourses(): Observable<courses[]> {
 
     return this.http.get<courses[]>(this.url);
    
-
-  }
-
-
-
-  
+  }  
    
 
 }

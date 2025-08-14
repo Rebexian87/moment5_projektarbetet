@@ -9,9 +9,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class MainmenuComponent {
 
-
+// Variables for the images
     logoImage: string = "logo.svg"; 
-   logoImage2: string = "logo2.svg"; 
+    logoImage2: string = "logo2.svg"; 
    
 
     
