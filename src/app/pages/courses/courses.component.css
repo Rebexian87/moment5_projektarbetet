@@ -5,9 +5,6 @@ table {
     margin-top: 5%;
     font-size: 1.0em;
     line-height: 120%;
-   
-
-     
 }
 
 th {
@@ -57,19 +54,14 @@ button {
 
     .th_td1 {
         display: none;
-    }
-    
-
- }
+    } }
 
  /*Handles mediaQueries for screen with max-width 850px*/
  @media only screen and (max-width: 850px) {
 
     .th_td4 {
         display: none;
-    }
-
- }
+    } }
 
  /*Handles mediaQueries for screen with max-width 570px*/
   @media only screen and (max-width: 570px) {

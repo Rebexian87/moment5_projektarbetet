@@ -1,48 +1,40 @@
-<h2>Mina valda kurser</h2>
+<!--Section with the total amount of points your selected courses has, 
+button that clears localstorage and table and a button that takes you to the page with al courses -->
+<section>
+    <h2>Mina valda kurser</h2>
+    @if(filteredCourses.length === 0){
+    <p>Det finns inga valda kurser</p>}
+    
+    <p> Du har lagt till {{filteredCourses.length}} kurser. Totala antalet poäng för  dessa är {{sum}}</p>
+    
+    <p>Om du vill ta bort alla kurser: <button (click)="clearLocalstorage()">Rensa tabell</button></p>
+    
+    <p>Vill du lägga till fler kurser:  <button (click)="navigateTo()">Våra kurser</button></p>
+</section>  
 
-    @if(filteredCourses.length === 0) {
-     <p>Det finns inga valda kurser</p>
-}
-
-   <p> Du har lagt till {{filteredCourses.length}} kurser. Totala antalet poäng för  dessa är {{sum}}</p>
-
-   <p>Om du vill ta bort alla kurser: <button (click)="clearLocalstorage()">Rensa tabell</button></p>
-
-   <p>Vill du lägga till fler kurser:  <button (click)="navigateTo()">Våra kurser</button></p>
-          
-
+<!--The table with selected courses-->
 <table>
-
-
-      <thead>
-<tr>
+    <thead>
+        <tr>
         <th  class="th_td1">Kurskod</th>
         <th>Namn</th>
         <th class="th_td3">Poäng</th>
         <th class="th_td4">Ämne</th>
-    
         <th>Länk</th>    
-</tr>
+        </tr>
     </thead>
 
    <tbody > 
-    <tr *ngFor="let course of filteredCourses; let i=index">
+        <tr *ngFor="let course of filteredCourses; let i=index">
         <td  class="th_td1">{{course.courseCode}}</td>
         <td>{{course.courseName}}</td>
-            <td class="th_td3">{{course.points}}</td>
+        <td class="th_td3">{{course.points}}</td>
         <td class="th_td4">{{course.subject}}</td>
-         
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
         <td><button id="{{i}}" (click)="deleteCourse($event)" >Ta bort kurs</button></td>   
         </tr>
-
-        <!--(click)=" deleteCourse($event)"-->
-    </tbody> 
-
-
-    
-
- </table>
+</tbody> 
+</table>
 
    
 

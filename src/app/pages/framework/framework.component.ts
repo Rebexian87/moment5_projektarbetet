@@ -12,16 +12,17 @@ import { Router } from '@angular/router';
   styleUrl: './framework.component.css'
 })
 export class FrameworkComponent {
-  [x: string]: any;
+ 
 
-  
+  //Constructor with Frameworkervice and RouterImport
   constructor(private FrameworkService: FrameworkService, private router:Router ) {}
    navigateTo() {
     this.router.navigate(['/courses'])
    }
 
-
-
+   //Variables with types
+    [x: string]: any;
+    
     storageCourses: courses[] = [];
 
     courses: courses[] = [];
@@ -32,78 +33,56 @@ export class FrameworkComponent {
 
     storage:any
 
-     e:any ='';
+    e:any ='';
 
-     sum: number =0
+    sum: number=0
 
-     showOnyOne: courses []=[]
+    showOnyOne: courses []=[]
 
     
 
-
+  // This happens when page initials, for example it loads the courses 
    ngOnInit(){
- 
-
-   this.loadItems()
-  
-    this.add()    
-      
+      this.loadItems()
+      this.add()    
   }
 
-      loadItems(): void {
-        this.filteredCourses=[]
+    //Loads courses from LocalService with help from FrameworkService
+    loadItems(): void {
+      this.filteredCourses=[]
          
         if(JSON.parse(localStorage.getItem("courses") as string)) {
-        this.filteredCourses=this.FrameworkService.loadCourses("courses")}
-       
-        console.log(this.filteredCourses[0]);      
-      
-      }
-  
-
-    
+        this.filteredCourses=this.FrameworkService.loadCourses("courses")}   
+       }
+    //Delete course with the specifik id from table and localstorage
     deleteCourse (e:any):void {
        let push= e.target.id
-
-          delete this.filteredCourses[push]
-
-           localStorage.setItem("courses", JSON.stringify(this.filteredCourses.flat())) 
-           this.loadItems()
        
-        console.log(push);  
+       delete this.filteredCourses[push]
+        
+       localStorage.setItem("courses", JSON.stringify(this.filteredCourses.flat())) 
+        
+        this.loadItems()     
+       
         this.add()
- 
-
       }
 
-
-
+    //Function that add all points from the courses that are choosen 
     add(): number {
-            this.sum=0
-
-              for (let i=0; i<this.filteredCourses.length; i++) {
-                  this.sum += this.filteredCourses[i].points
-                
-    }
-
-
-         
-             console.log(this.sum);
-             return this.sum
-            
-             
-    }
-
-    clearLocalstorage() {
-      localStorage.removeItem("courses")
-      this.loadItems()
-
-           
-      
-       
-    }
-
+        this.sum=0
+          for (let i=0; i<this.filteredCourses.length; i++) {
+              this.sum += this.filteredCourses[i].points              
+            }        
+           return this.sum        
+          }
     
-}
+    //Function that clears localstorage and tha table
+    clearLocalstorage() {
+        localStorage.removeItem("courses")
+        
+        this.loadItems()   
+      }
+
+    }
 
 

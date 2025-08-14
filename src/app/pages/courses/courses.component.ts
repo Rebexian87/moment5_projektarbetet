@@ -40,8 +40,9 @@ export class CoursesComponent {
   constructor(private CoursesService: CoursesService, private router:Router ) {}
 
  
-  // Thing that happens when page initials, for example it loads the courses 
+  // This happens when page initials, for example it loads the courses 
   ngOnInit(): void{
+    //loadcourses with help from CoursesService
       this.CoursesService.loadCourses().subscribe((courses)=> {this.courses=courses; this.filteredCourses=courses; })  
       this.CoursesService.loadCourses().subscribe((courses)=> {this.showOnlyOne=courses.filter((course, index, self) => self.findIndex(c=>c.subject === course.subject) ===index) })
     }

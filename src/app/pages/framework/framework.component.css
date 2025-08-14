@@ -1,10 +1,10 @@
+
+/*Styling for table*/
 table { /*Allmänna regler för footer*/
   
     margin-top: 5%;
     font-size: 1.2em;
     line-height: 120%;
-
-     
 }
 
 th {
@@ -13,38 +13,41 @@ th {
     padding: 0.3em;
 }
 
-p {
-    text-align: center;
-}
-
 td {
     margin-left: 5%;
     padding: 0.3em;
 }
 
+
+/*Styling for paragraph*/
+p {
+    text-align: center;
+}
+
+
+/*Styling for button*/
 button {
     background-color: orange;
     padding: 0.2em;
     cursor: pointer;
 }
 
+/*Handles mediaQueries for screen with max-width 950px*/
 @media only screen and (max-width: 950px) {
 
     .th_td1 {
         display: none;
-    }
-    
+    } }
 
- }
-
+/*Handles mediaQueries for screen with max-width 850px*/
  @media only screen and (max-width: 850px) {
 
     .th_td4 {
         display: none;
-    }
+    } }
 
- }
 
+ /*Handles mediaQueries for screen with max-width 570px*/
   @media only screen and (max-width: 570px) {
 
     .th_td3 {
