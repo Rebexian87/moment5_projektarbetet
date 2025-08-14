@@ -1,9 +1,11 @@
-table { /*Allmänna regler för footer*/
+
+/*Styling for table*/
+table { 
   
     margin-top: 5%;
     font-size: 1.0em;
     line-height: 120%;
-    /* background-color: brown; */
+   
 
      
 }
@@ -20,13 +22,14 @@ td {
 
 }
 
-p{
+/*Styling for paragraph*/
+p{ 
     text-align: center;
 }
 
 
-
-#filter {
+/*Styling forFilterbox*/
+#filter { 
     margin: auto;
     margin-bottom: 0.8em;
     width: 300px;
@@ -34,18 +37,22 @@ p{
     
 }
 
-#selectAmne{
+/*Styling for selectoptions*/
+#selectAmne{ 
    font-size: 0.9em;
    margin-bottom: 1em;
 
 }
 
+/*Styling for button*/
 button {
     background-color: orange;
     padding: 0.2em;
     cursor: pointer;
 }
 
+
+/*Handles mediaQueries for screen with max-width 950px*/
 @media only screen and (max-width: 950px) {
 
     .th_td1 {
@@ -55,6 +62,7 @@ button {
 
  }
 
+ /*Handles mediaQueries for screen with max-width 850px*/
  @media only screen and (max-width: 850px) {
 
     .th_td4 {
@@ -63,6 +71,7 @@ button {
 
  }
 
+ /*Handles mediaQueries for screen with max-width 570px*/
   @media only screen and (max-width: 570px) {
 
     .th_td3 {

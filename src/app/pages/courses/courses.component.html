@@ -1,65 +1,47 @@
-<h2 class="position1">Kurser på vårt universitet</h2>
-<p>Lägg till kurser och se dina tillagda kurser: <button (click)="navigateTo()">Ramschema</button></p>
+
+<!--Section with paragraph and the number of courses of total amount of courses-->
+<section>
+    <h2>Kurser på vårt universitet</h2>
+    <p>Lägg till kurser och se dina tillagda kurser: <button (click)="navigateTo()">Ramschema</button></p>
     <p> Visar {{filteredCourses.length}} av {{courses.length}} kurser</p>
+</section>
 
-
-<div class="position2">
+<!--Section with filter-->
+<section>
     <label for="filter" class="label">Sök kurs</label> <br>
     <input type="text" id="filter" [(ngModel)]="filterValue" (input)="applyFilter()">
     @if(filteredCourses.length === 0) {
-     <p>Inga kurser matchar sökningen</p>
-}
+    <p>Inga kurser matchar sökningen</p>}
+</section>
 
-</div>
-
-
-
-
-    <div class="position3">
+<!--Section with selectbox of subjects-->
+<section>
     <label for="selectAmne" class="label">Välj ämne</label> <br>
-    <select (change)="applyFilter2($event)"  name="selectAmne" id="selectAmne" ><option (click)="showAll()">Alla</option><option *ngFor="let course of showOnlyOne" [value]="course.subject" id="{{course.subject}}" 
+    <select (change)="applyFilter2($event)"  name="selectAmne" id="selectAmne" ><option value>Välj ämne</option><option (click)="showAll()">Alla</option><option *ngFor="let course of showOnlyOne" [value]="course.subject" id="{{course.subject}}" 
          >{{course.subject}}</option></select>
+</section>    
 
-     </div>
-    
-    
-  
-    
-    <div class="position4">
-
-</div>
-
-
-   
-
+<!--Section with table with courses-->
 <table class="courses">
-      <thead>
-<tr>
-    <th class="th_td1" (click)="sort1()">Kurskod</th>
-    <th  (click)="sort2()">Namn</th>
-       <th class="th_td3" (click)="sort3()">Poäng</th>
-          <th class="th_td4" (click)="sort4()">Ämne</th>
- 
-    <th>Länk</th>
-    
-</tr>
+    <thead>
+        <tr>
+        <th class="th_td1" (click)="sort1()">Kurskod</th>
+        <th  (click)="sort2()">Namn</th>
+        <th class="th_td3" (click)="sort3()">Poäng</th>
+        <th class="th_td4" (click)="sort4()">Ämne</th> 
+        <th>Länk</th>
+        </tr>
     </thead>
-
     
-   <tbody >
-    <tr *ngFor="let course of filteredCourses" >
+    <tbody >
+        <tr *ngFor="let course of filteredCourses" >
         <td class="th_td1">{{course.courseCode}}</td>
         <td>{{course.courseName}}</td>
-            <td class="th_td3">{{course.points}}</td>
+        <td class="th_td3">{{course.points}}</td>
         <td class="th_td4">{{course.subject}}</td>
-       
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
-         
         <td><button id="{{course.courseCode}}" (click)="storeCourse($event)">{{textOnButton}}</button>
-            </tr>
+        </tr>
     </tbody>
-
- <!-- <td><button id="{{course.courseCode}}" (click)="storeCourse($event)">Lägg till</button></td>   -->
-
 </table>
 

@@ -1,3 +1,5 @@
+// Interface that handles courses
+
 export interface courses {
     courseCode: string;
     courseName: string;
