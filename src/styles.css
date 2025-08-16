@@ -21,7 +21,8 @@ h1 {
 
 h2 {
      font-size: 1.3em;  
-      color: blue;
+      color: rgb(94, 47, 1);
+   
       margin-top: 5%;
       margin-bottom: 5%;
       text-align: center;
@@ -44,6 +45,8 @@ main {
 th {
     color: blue;
 }
+
+/*Every other row gets  a different color*/
 
  table tbody tr:nth-of-type(even) {
     background-color: rgb(241, 239, 239);

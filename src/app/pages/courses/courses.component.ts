@@ -88,6 +88,7 @@ export class CoursesComponent {
   //This function stores the chooses course to localstorage
   storeCourse(e:any):void {
         let push= e.target.id   //The id of the choosen course/button
+       
         
         this.selectedCourse =  this.courses.find((course)=>course.courseCode === push) //this finds the choosen course with that coursecode
         
@@ -104,6 +105,7 @@ export class CoursesComponent {
   }
  
 }
+
 
 
 

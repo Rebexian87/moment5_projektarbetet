@@ -81,6 +81,7 @@ export class FrameworkComponent {
         localStorage.removeItem("courses")
         
         this.loadItems()   
+           this.add()
       }
 
     }

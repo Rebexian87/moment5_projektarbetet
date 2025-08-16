@@ -7,6 +7,7 @@ export interface courses {
     progression: string;
     subject: string;
     syllabus: string
+    added:boolean
 }
 
 

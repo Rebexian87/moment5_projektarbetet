@@ -40,7 +40,7 @@
         <td class="th_td3">{{course.points}}</td>
         <td class="th_td4">{{course.subject}}</td>
         <td><a [href] = "course.syllabus" target="_blank">Visa kurs</a></td>  
-        <td><button id="{{course.courseCode}}" (click)="storeCourse($event)">{{textOnButton}}</button>
+        <td><button id="{{course.courseCode}}" (click)="storeCourse($event)" >{{textOnButton}}</button>
         </tr>
     </tbody>
 </table>

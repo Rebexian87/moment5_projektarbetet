@@ -17,7 +17,7 @@ export class FrameworkService {
         return JSON.parse(localStorage.getItem(key) as string).filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index); //.filter((course:any, index:number, self:any) => self.findIndex((c:any)=>c.courseCode === course.courseCode) ===index);}
       }
 
-  
+    
 
   
   // loadCourses(): Observable<courses[]> {
