@@ -21,6 +21,7 @@ export class HomeComponent {
   imageGrasFlowers: string = "blommor.jpg"; //https://pixabay.com/sv/photos/blomster%C3%A4ng-v%C3%A5r-natur-%C3%A4ng-n%C3%A4rbild-7955256/
   imageStudent:string="bildStudent.png" //https://pixabay.com/sv/illustrations/sk%C3%B6nhet-sk%C3%B6n-kvinna-h%C3%A4lsa-l%C3%A4sning-9596371/
   imageBooks:string="bildBooks.jpg" // https://pixabay.com/sv/illustrations/student-informationssystem-2317832/
+  
 
   //Constructor with RouterImport
    constructor(private router:Router) {}
@@ -29,6 +30,8 @@ export class HomeComponent {
    //Function that navigates a user to a different site
    navigateTo() {
     this.router.navigate(['/courses'])
+
+ 
    }
 
 }
