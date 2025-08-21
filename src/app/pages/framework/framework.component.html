@@ -3,13 +3,16 @@ button that clears localstorage and table and a button that takes you to the pag
 <section>
     <h2>Mina valda kurser</h2>
     @if(filteredCourses.length === 0){
-    <p>Det finns inga valda kurser</p>}
+    <p><strong>Det finns inga valda kurser så det totala antalet poäng för dess är {{sum}}.</strong> </p>
+    <p>Vill du lägga till fler kurser:  <button (click)="navigateTo()">Våra kurser</button></p> 
+}
     
-    <p> Du har lagt till {{filteredCourses.length}} kurser. Totala antalet poäng för  dessa är {{sum}}</p>
+    @if(filteredCourses.length > 0){
+    <p> Du har lagt till {{filteredCourses.length}} kurser. Totala antalet poäng för  dessa är {{sum}}.</p>
     
     <p>Om du vill ta bort alla kurser: <button (click)="clearLocalstorage()">Rensa tabell</button></p>
     
-    <p>Vill du lägga till fler kurser:  <button (click)="navigateTo()">Våra kurser</button></p>
+    <p>Vill du lägga till fler kurser:  <button (click)="navigateTo()">Våra kurser</button></p> }
 </section>  
 
 <!--The table with selected courses-->
