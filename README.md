@@ -1,59 +1,16 @@
 # Moment5 Projektarbete
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+Av Rebecca Smith, resm2400
 
-## Development server
+## Detta innehåller sidan
 
-To start a local development server, run:
+En startsida med olika information om universitetet och en länk till kurserna som universitetet erbjuder. 
 
-```bash
-ng serve
-```
+En kursida med alla kurser som läst in från ett API. Man kan filtrera ut önskad kurs med hjälp av sökbaren. Man kan också få fram alla kurser från ett visst ämne. Man kan sortera de olika kolumnerna och lägga till de kurser man vill ha med i ramschemat. Det finns en knapp som tar en till ramschemat.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+En sida med ramschemat som visar de kurser man valt. Man kan inte lägga till samma kurs två gånger. Man kan ta bort kurserna man inte vill ha och man kan rensa hela ramschemat. Detta sker via localstorage. Sidan visar hur mång poäng som de kurserna med lagt till sammanlagt har.
 
-## Code scaffolding
+## Extra funktionalitet
+Extra funktionalitet är exempelvis en startsida. Man kan rensa hela ramschemat om man vill och det finns knappar som länkar till övriga sidor. Jag har försökt få till ett bättre användargränssnitt. 
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Det finns en ifsats i sidan med ramschemat så att olika delar visas upp beroende på om det inte finns några kurser i ramschemat eller om det finns. Man kan rensa hela ramschemat om man vill och det finns knappar som länkar till övriga sidor. 
